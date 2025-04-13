@@ -1,0 +1,156 @@
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Body and foreground content */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 300px;
+    height: max-content;
+    min-height: 300px;
+    background-color: #5458ae;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #5553;
+    padding: 30px;
+    box-sizing: border-box;
+}
+main form{
+    border: 10px solid #5552;
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+}
+main form input, 
+main form button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+main form i{
+    opacity: 0.7;
+}
+main .result{
+    padding-top: 20px;
+    text-align: center;
+}
+main .result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main .temperature img{
+    width: 150px;
+    filter: drop-shadow(0 10px 50px #555);
+}
+main .temperature figcaption{
+    font-size: 3em;
+}
+main .description{
+    padding: 10px 0 30px;
+}
+main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+main li{
+    background-color: #57cff7;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    font-size: small;
+}
+main ul li i{
+    font-size: 2em;
+    margin: 20px 0;
+    display: block!important;
+}
+main li:nth-child(2){
+    background-color: #b56291;
+}
+main li:nth-child(3){
+    background-color: #48567b;
+}
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}
+
+.temperature {
+    font-size: 20px;
+    text-align: center;
+    
+  }
+
+.fa-solid fa-gauge{
+font-size: medium;
+color: #fff;    
+background-color: aqua;
+}
+
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+  }
+  
